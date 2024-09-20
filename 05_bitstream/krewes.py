@@ -2,7 +2,9 @@
 #China Rats plus One
 #Soft Dev
 #<parse/python dictionaries and parsing/opens text file and splits the data and then appends a dictionary of the split data>
+#2024-09-17
 #Time spent: ~20 minutes
+
 import random
 
 krewes_list = []
