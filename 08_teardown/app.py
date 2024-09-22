@@ -16,9 +16,11 @@ QCC:
  ...
 
 INVESTIGATIVE APPROACH:
-<Your concise summary of how
- you and your team set about
- "illuminating the cave of ignorance" here...>
+<We first tried seeing if we could find where the server was being hosted. We know that flask is used for websites
+and we assumed it was going to be a localhost as well, so we copied and pasted the server address that was printed in the terminal.
+We were able to get on the server and saw "No hablo queso!" printed on the website, and we tried changing the return
+to something else to see if it would change the text and it did. We also changed the name app to something else to see
+if the code would break but it didn't so it seems like app is just a variable name that could be anything.>
 '''
 
 
