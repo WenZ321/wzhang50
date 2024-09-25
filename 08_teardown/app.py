@@ -1,4 +1,9 @@
-# your heading here
+#Wen Zhang
+#China Rats plus One
+#Soft Dev
+#<Processing a csv file(python dictionaries) and using weighted percentages to select a random job>
+#2024-09-19
+#Time spent: ~30 minutes
 
 '''
 DISCO:
@@ -8,9 +13,9 @@ When I changed what is in the return, the website also matches to what I changed
 
 QCC:
 0. In java, where we would create an object from a class. In this example, a Flask class.
-1. This could be like going to the homepage
+1. File System Route
 2. I think this will print to the console/terminal where the Flask server is running
-3. I am not sure
+3. Prints whatever is in the print statement
 4. I think it will appear on the website where the flask server is being runnmed
 5. I have seen this in java, where we call a function of a class through an object of that class
  ...
