@@ -31,8 +31,25 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route("/")
-def randOccupation():
-    print(__name__)
-    return select_occupation(occupation_list, percentages)
-
-app.run()
+def page():
+    occupation = select_occupation(occupation_list, percentages)
+    html = """
+    <!DOCTYPE html>
+    <html>
+        <body>
+            <p> China Rat Plus one with Jackie, Winwei, Wen. Traveling team (Loonch) with Wen, Tracy, and Jessica. </p>
+            <h1> Selected Occupation: """ + occupation[0] + """</h1>
+             Occupationlist 
+    """
+    jobs = "<table><tr><th> Job List </tr></th>"
+    for job in occupation_list:
+        jobs += "<tr><td> " + job + " </tr></td>"
+        
+    jobs += "</table>"
+    html = html.replace("Occupationlist", jobs)
+    return html
+    
+    
+if __name__ == "__main__":      
+    app.debug = True            
+    app.run()
