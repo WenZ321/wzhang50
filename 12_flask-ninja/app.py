@@ -5,14 +5,25 @@
 """
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Q0:
-
+There will be no error if we go to the main path, but there will be an error if we go to /my_foist_template
 
 Q1:
-<your response here>
+No, turns out we can not find the correct url. But we found the correct url later: https://127.0.0.1:5000/my_foist_template
 
 Q2:
-<your response here>
+The parameters tell us which html file to use as template and the values for the variables used in the template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Questions:
+- Where is my_foist_template in the path?
+- Why would render_template not be found when it was imported?
+
+Notes:
+- Contrary to expectations the code did not return a error when render_template was removed, would there be an error when the path to the html file is typed?
+- When you use the template, the route for the url is not the path to the html in your directory anymore, it is the route that you set in your decorator.
+    - The path to the html file in your directory no longer can be accessed as a url.
+    
+    
 """
 
 
@@ -21,7 +32,7 @@ Q2:
 # Q0: What will happen if you remove render_template from the following statement?
 # (log prediction before executing...)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-from flask import Flask
+from flask import Flask, import render_template
 app = Flask(__name__)
 
 @app.route("/")
