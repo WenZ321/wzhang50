@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> {{ title }} </title>
+    </head>
+
+    <body>
+        <h1> job </h1>
+
+        <table>
+             <tr><th> {{ Occ }} </th></tr>
+             {% for item in collection %}
+                 <tr><td>{{ item }}</tr></td>
+  
+            {% endfor %}
+        </table>
+    </body>
+</html>
