@@ -6,7 +6,7 @@ K13 -- creating template to make html table
 2024-09-30
 Time spent: 30 mins
 '''
-
+# https://www.bls.gov/ooh/management/
 import random
 import csv
 
@@ -22,7 +22,7 @@ with open('data/occupations.csv', newline ='') as csvfile:
         occupation_dict.append([row['Job Class'], float(row['Percentage'])])
         
 
-occupation_list = occupation_dict[0:-1]
+occupation_dict = occupation_dict[0:-1]
 occupation_list = occupation_list[1:-1]
 percentages = percentages[1:-1]
 
@@ -38,8 +38,11 @@ app = Flask(__name__)
 
 @app.route("/wdywtbwygp")
 def page():
+    head = "A table of job occupation with helpful links to help you get started with that guide"
+    tnpgroster = "Made In Africa - Wen, Jackie, Danny"
     occupation = select_occupation(occupation_list, percentages)
-    return render_template('tablified.html', title = "Job Table", Job = occupation[0], Occ = "Jobs", collection = occupation_dict)
+    
+    return render_template('tablified.html', title = "Job Table", Heading = head, TNPGROSTER = tnpgroster, Job = "Chosen Job: " + str(occupation[0]), Occ = "Jobs", collection = occupation_dict)
     
     
 if __name__ == "__main__":      
