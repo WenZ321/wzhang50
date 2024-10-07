@@ -41,6 +41,9 @@ PROTIP: Insert your own in-line comments
 
 @app.route("/") #, methods=['GET', 'POST'])
 def disp_loginpage():
+    ### All of these print statements print to the terminal
+    
+    #print(testmod0.goo())
     #print("\n\n\n")
     #print("***DIAG: this Flask obj ***")
     #print(app)
@@ -67,7 +70,7 @@ def authenticate():
     #print("***DIAG: request.args['username']  ***")
     #print(request.args['username'])
     #print("***DIAG: request.headers ***")
-    #print(request.headers)
+    print(request.headers)
     return "Waaaa hooo HAAAH"  #response to a form submission
 
 
