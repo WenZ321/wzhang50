@@ -1,4 +1,11 @@
-< your heading here >
+'''
+Wen Zhang, Jackie Zeng, Yinwei
+Made in China
+SoftDev
+K14 -- Taking notes on python module and more html and flask
+2024-10-07
+Time spent: 30 mins
+'''
 
 DISCO:
 * The print statement in the testmod0.py file automatically ran when importing the module
