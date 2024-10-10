@@ -1,38 +1,40 @@
-# Clyde 'Thluffy' Sinclair
+# Wen Zhang, Yinwei Zhang, Jackie Zeng
+# Made In China
 # SoftDev
-# October 2024
+# K16 <Flask Forms, Cookies>
+# 2024-10-8
+# Time Spent : 2 Hours
 
-# import conventions:
-# list most general first (standard python library)
-# ...then pip installs (eg Flask)
-# ...then your own home-rolled modules/packages (today's test module)
+from flask import Flask, request, render_template, make_response
 
-from flask import Flask             #facilitate flask webserving
-from flask import render_template   #facilitate jinja templating
-from flask import request           #facilitate form submission
+app = Flask(__name__)
 
-#the conventional way:
-#from flask import Flask, render_template, request
+@app.route('/', methods=['GET'])
+def index():
+    username = request.cookies.get('username')
+    if username:
+        return render_template('response.html', username=username, request="Already Logged In")
+    return render_template('login.html')
 
-app = Flask(__name__)    #create Flask object
+@app.route('/response', methods=['GET', 'POST'])
+def greetings_page():
+    if request.method == 'POST':
+        username = request.form['username']
+        response = make_response(render_template('response.html', username=username, request="POST"))
+        response.set_cookie('username', username)
+        return response
+    else:
+        username = request.args.get('username')
+        response = make_response(render_template('response.html', username=username, request="GET"))
+        response.set_cookie('username', username)
+        return response
 
+@app.route('/logout', methods=['GET', 'POST'])
+def logout():
+    logout_response = make_response(render_template('logout.html'))
+    logout_response.delete_cookie('username')
+    return logout_response
 
-@app.route("/") 
-def disp_loginpage():
-
-    return render_template( 'login.html' )
-
-
-@app.route("/auth")
-def responsePage():
-    username = request.args['username']
-    responseSite = render_template( 'response.html', username) #response to a form submission
-    responseSite.set_cookie("userID", username)
-    return responseSite
-
-    
-if __name__ == "__main__": #false if this file imported as module
-    #enable debugging, auto-restarting of server when this file is modified
-    app.debug = True 
+if __name__ == '__main__':
+    app.debug = True
     app.run()
-

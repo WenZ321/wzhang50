@@ -1,28 +1,35 @@
+<!-- Yinwei Zhang, Wen Zhang, Jackie Zeng
+Wen Zhang
+SoftDev
+K15 <Flask Forms, GET, POST>
+2024-10-8
+Time Spent : 2 Hours
+-->
+
 <!DOCTYPE html>
-<html>
-
-  <head>
-    <title> LOGIN PAGE </title>
-  </head>
-
-  <body>
-    <h1> 
-      Wen Zhang, Jackie Zeng, Yinwei Zhang <br>
-      Made In China
-    </h1>
-
-    <h2>
-      Howdy, friends!
-    </h2>
+<html lang="en">
+    <body>
+        <div>
+            <h1>Team Made in China</h1>
+            <h2>Yinwei Zhang, Wen Zhang, Jackie Zeng</h2>
 
 
-    <h3>
-      Enter your username below to proceed.
-    </h3>
-    <form action="/login">
-      <input type="text" name="username">
-      <input type="submit" name="sub1">
-    </form>
-  </body>
+            <form action="/response" method="POST">
+                <div>
+                    <label for="username">Name</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
 
+                <button type="submit">Submit with POST</button>
+            </form>
+
+            <form action="/response" method="GET">
+                <div>
+                    <label for="username">Name</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <button type="submit">Submit with GET</button>
+            </form>
+        </div>
+    </body>
 </html>
