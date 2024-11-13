@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src = "https://cdn.tailwindcss.com"> </script>
+        <title> Tailwind How-To </title>
+    </head>
+
+    <body>
+        <!--
+            p-6 : Padding of size 6  
+            max-w-sm : Max width of 384px
+            mx-auto : Auto margins
+            bg-white : background of white color
+            rounded-xl : Rounds the corner of the box
+            shadow-lg : Shadow of the box
+            flex : Flexbox of the text
+            items-center : Center the items
+            gap-x-4 : Spacing between image and text
+        -->
+        <div class = "p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center gap-x-4">
+            <!-- Will not shrink whatever is inside the div -->
+            <div class = "shrink-0">
+                <img class = "size-20" src="Tailwind_CSS_Logo.svg.png">    
+            </div>
+            <div>
+                <!-- Font  -->
+                <div class = "text-xl font-medium text-black"> Tailwind </div>
+                <p class = "text-black"> You can directly add CSS customization within the HTML file instead of linking a CSS file with code! </p>
+            </div>
+        </div>
+    </body>
+</html>
