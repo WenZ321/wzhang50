@@ -46,6 +46,8 @@ populate("students.csv", "students")
 populate("courses.csv", "courses")
 
 #==========================================================
+for row in c.execute("SELECT name, age, id FROM students"):
+        print(row)
 
 db.commit() #save changes
 db.close()  #close database
