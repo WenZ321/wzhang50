@@ -22,18 +22,22 @@
             items-center : Center the items
             gap-x-4 : Spacing between image and text
         -->
-        <div class = "grid grid-cols-4 gap-5">
+        <div class = "grid grid-cols-4 gap-2">  <!-- grids of 4 columns with a gap of 2 padding in between each grid element -->
             <!-- box 1 -->
             <div class = "max-w-sm ml-20 mt-10 items-center flex">
                 <div class = "shrink-0">
                     <img class = "size-20" src="Tailwind_CSS_Logo.svg.png">    
                 </div>
                 <div>
-                    <!-- Font  -->
+                    <!--  
+                        text-xl : Text size of extra large, can change xl
+                        font-medium : Font weight of medium, can change medium to other sizes
+                        text-black : Text color of black, can change to other colors
+                    -->
                     <div class = "text-xl font-medium text-black"> Tailwind </div>
                     <p class = "text-black"> 
                         You can directly add CSS customization within the HTML file instead of linking a CSS file with!
-                        You do this by adding different keywords for modifiers in a class within the tags. 
+                        You do this by adding different keywords for modifiers in a class within the tags. (i.e class = "Whatever built in CSS class you want to use")
                     </p>
                 </div>
             </div>
@@ -44,11 +48,10 @@
                     <img class = "size-20" src="Tailwind_CSS_Logo.svg.png">    
                 </div>
                 <div>
-                    <!-- Font  -->
                     <div class = "text-xl font-medium text-black"> Tailwind </div>
                     <p class = "text-black"> 
                         You can add shadows to your containers using "shadow-lg" and 
-                        also add gaps between items using gap-(x or y axis)-(size of gap)
+                        also add gaps between items using gap-(x or y )-(size of gap)
                     </p>
                 </div>
             </div>
@@ -59,7 +62,6 @@
                     <img class = "size-20" src="Tailwind_CSS_Logo.svg.png">    
                 </div>
                 <div>
-                    <!-- Font  -->
                     <div class = "text-xl font-medium text-black"> Tailwind </div>
                     <p class = "text-black"> 
                         Add rounded edges to containers using "rounded-xl" and
@@ -68,17 +70,87 @@
                 </div>
             </div>
 
-            <!-- box 4 -->
-            <div class = "max-w-sm ml-20 mt-10 items-center flex shadow-lg gap-x-4 rounded-xl p-6 hover:bg-sky-100">
+            <!-- box 4 
+             
+            border-2 : Border of size 2, can change the px size of border
+            border-sky-500 : Border color of sky-500, can change the color and shade of color
+            -->
+            <div class = "max-w-sm ml-20 mt-10 items-center flex shadow-lg gap-x-4 rounded-xl p-6 border-2 border-sky-500">
                 <div class = "shrink-0">
                     <img class = "size-20" src="Tailwind_CSS_Logo.svg.png">    
                 </div>
                 <div>
-                    <!-- Font  -->
+                    <div class = "text-xl font-medium text-black"> Tailwind </div>
+                    <p class = "text-black"> 
+                        Add borders to your containers using "border-(size) border-(color)-(shade of color)"
+                    </p>
+                </div>
+            </div>
+
+            <!-- box 5
+             
+            hover:bg-sky-100 : Hover background color of sky-100
+            -->
+            <div class = "max-w-sm ml-20 mt-10 items-center flex shadow-lg gap-x-4 rounded-xl p-6 border-2 border-sky-500 hover:bg-sky-100">
+                <div class = "shrink-0">
+                    <img class = "size-20" src="Tailwind_CSS_Logo.svg.png">    
+                </div>
+                <div>
                     <div class = "text-xl font-medium text-black"> Tailwind </div>
                     <p class = "text-black"> 
                         Hover me!
                         You can add hovers over items by using hover:(any background color i.e bg-sky-100)
+                    </p>
+                </div>
+            </div>
+
+            <!-- box 6
+             
+            hover:scale-125 : Hover zooming out by 125%, can change the % to other values
+            transition ease-in-out duration-300 : Transition ease in out with duration of 300ms, can change the time duration of the animation
+            -->
+            <div class = "max-w-sm ml-20 mt-10 items-center flex shadow-lg gap-x-4 rounded-xl p-6 border-2 border-sky-500 hover:bg-sky-100 hover:scale-125 transition ease-in-out duration-300">
+                <div class = "shrink-0">
+                    <img class = "size-20" src="Tailwind_CSS_Logo.svg.png">    
+                </div>
+                <div>
+                    <div class = "text-xl font-medium text-black"> Tailwind </div>
+                    <p class = "text-black"> 
+                        Hover me!
+                        You can also add transitions when hovering using 
+                        "transition ease-in-out duration-300". The zooming out feature is added by using "hover:scale-125".
+                    </p>
+                </div>
+            </div>           
+
+            <!-- box 7
+            animate-bounce : Animation of bounce, can change bounce to other animations such as pulse, ping, or spin
+            -->
+            <div class = "animate-bounce max-w-sm ml-20 mt-10 items-center flex shadow-lg gap-x-4 rounded-xl p-6 border-2 border-sky-500 hover:bg-sky-100 transition ease-in-out duration-300">
+                <div class = "shrink-0">
+                    <img class = "size-20" src="Tailwind_CSS_Logo.svg.png">    
+                </div>
+                <div>
+                    <div class = "text-xl font-medium text-black"> Tailwind </div>
+                    <p class = "text-black"> 
+                        You can add animations to your containers using "animate-bounce", bounce could be to change to other keywords that 
+                        create different animations such as pulse, ping, or spin.
+                    </p>
+                </div>
+            </div>
+
+            <!-- box 8
+            
+            ring-4 : Ring of size 4, can change the px size of ring
+            -->
+            <div class = "ring-4 max-w-sm ml-20 mt-10 items-center flex shadow-lg gap-x-4 rounded-xl p-6 border-2 border-sky-500 hover:bg-sky-100 transition ease-in-out duration-300">
+                <div class = "shrink-0">
+                    <img class = "size-20" src="Tailwind_CSS_Logo.svg.png">    
+                </div>
+                <div>
+                    <div class = "text-xl font-medium text-black"> Tailwind </div>
+                    <p class = "text-black"> 
+                        Add a ring around your container using "ring-4", you can change the size of the ring by changing the px size.
                     </p>
                 </div>
             </div>
